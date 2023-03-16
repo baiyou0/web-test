@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <head>
+        <style>
+            div,p{
+                width: 600px;
+                margin: 50px auto;
+                font-size: 12px;
+                text-align: center;
+            }
+/*  */
+            button{
+                width: 100px;
+                height: 40px;
+                font-size: 32px;
+            }
+        </style>
+    </head>
+</head>
+<body>
+    <div>
+        <button>+</button>
+        <button>-</button>
+    </div>
+    <p>
+        云想衣裳花想容，<br>
+        春风拂槛露华浓。<br>
+        若非群玉山头见，<br>
+        会向瑶台月下逢。<br>
+    </p>
+    <script type="text/javascript">
+        let btns = document.getElementsByTagName("button");
+        let p = document.getElementsByTagName('p')[0];
+
+        let fs = 12;
+        btns[0].onclick = function(){
+            fs = fs + 2;
+            if(fs>=36){
+                fs = 36;
+            }
+
+            p.style.fontSize = fs + 'px';//
+        }
+
+        btns[1].onclick = function(){
+            fs = fs - 2;
+            if(fs<=12){
+                fs = 12;
+            }
+            p.style.fontSize = fs + 'px';
+        }
+
+    </script>
+
+</body>
+</html>
